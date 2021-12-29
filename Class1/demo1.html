@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo HTML 1</title>
+</head>
+
+<body>
+  <!-- Heading  -->
+  <h1>This is Heading 1</h1>
+  <h2>This is Heading 2</h2>
+  <h3>This is Heading 3</h3>
+  <hr>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. <strong>Quam id leo in vitae turpis massa</strong> sed elementum tempus. Vestibulum sed arcu non odio.
+    Tincidunt ornare massa eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget. Dolor purus non enim praesent elementum
+    facilisis leo vel. Auctor eu augue ut lectus arcu. Morbi tristique senectus et netus et malesuada. Volutpat lacus
+    laoreet non curabitur gravida. Purus semper eget duis at tellus. Lacus suspendisse faucibus interdum posuere. Justo
+    donec enim diam vulputate ut pharetra. Faucibus ornare suspendisse sed nisi lacus sed. Est ultricies integer quis
+    auctor elit sed vulputate mi sit. At auctor urna nunc id cursus metus aliquam eleifend. Neque egestas congue quisque
+    egestas diam. Purus semper eget duis at tellus at urna condimentum. Mauris in aliquam sem fringilla ut morbi
+    tincidunt. Viverra nibh cras pulvinar mattis nunc. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt
+    tortor aliquam.
+
+    <a href="https://google.com" target="_blank">Learn More...</a>
+
+  </p>
+
+  <!-- Link  -->
+  <div> <a href="https://google.com" target="_blank">Learn More...</a></div>
+
+  <!-- Images  -->
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
+    width="30%" alt="Cute Kitten">
+  <br>
+  <img width="30%"
+    src="https://gray-kalb-prod.cdn.arcpublishing.com/resizer/uHc0Io7tokW-epG1i20xND8zV2Q=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
+    alt="Cute Kitten">
+
+  <div>
+    <h2>My Cute Kittens 1</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
+      width="30%" alt="Cute Kitten">
+
+    <img width="30%"
+      src="https://gray-kalb-prod.cdn.arcpublishing.com/resizer/uHc0Io7tokW-epG1i20xND8zV2Q=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
+      alt="Cute Kitten">
+  </div>
+  <div>
+    <h2>My Cute Kittens 2</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
+      width="30%" alt="Cute Kitten">
+
+    <img width="30%"
+      src="https://gray-kalb-prod.cdn.arcpublishing.com/resizer/uHc0Io7tokW-epG1i20xND8zV2Q=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
+      alt="Cute Kitten">
+  </div>
+
+
+
+
+  <p>
+    Turpis egestas maecenas pharetra convallis posuere. Volutpat lacus laoreet non curabitur gravida arcu ac tortor.
+    Cras
+    tincidunt lobortis feugiat vivamus. Diam in arcu cursus euismod quis viverra. At risus viverra adipiscing at in
+    tellus. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Ultricies mi eget
+    mauris pharetra et. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Non pulvinar neque laoreet
+    suspendisse interdum consectetur libero id faucibus. Sit amet consectetur adipiscing elit duis tristique. Enim ut
+    tellus elementum sagittis vitae et. Leo integer malesuada nunc vel risus. Viverra nibh cras pulvinar mattis nunc sed
+    blandit libero. Mollis nunc sed id semper risus in hendrerit gravida. Eros donec ac odio tempor orci dapibus
+    ultrices
+    in. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Nullam vehicula ipsum a arcu. Urna duis
+    convallis convallis tellus id interdum velit laoreet. Nullam vehicula ipsum a arcu.
+  </p>
+
+
+  <system.web>
+    <membership>
+      <providers>
+        <add name="FBAMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          connectionStringName="FBADB" enablePasswordRetrieval="false" enablePasswordReset="true"
+          requiresQuestionAndAnswer="false" applicationName="/" requiresUniqueEmail="true" passwordFormat="Hashed"
+          maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1"
+          passwordAttemptWindow="10" passwordStrengthRegularExpression="" />
+      </providers>
+    </membership>
+    <roleManager>
+      <providers>
+        <add name="FBARoleProvider" connectionStringName="FBADB" applicationName="/"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </providers>
+    </roleManager>
+  </system.web>
+
+</body>
+
+</html>
