@@ -13,6 +13,7 @@
   <h1>This is Heading 1</h1>
   <h2>This is Heading 2</h2>
   <h3>This is Heading 3</h3>
+  <h4>This is Heading 4</h4>
   <hr>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -30,18 +31,22 @@
 
   </p>
 
+  Some text
   <!-- Link  -->
-  <div> <a href="https://google.com" target="_blank">Learn More...</a></div>
+  <div> 
+    <a href="http://mtmconsultinggroup.com" target="_blank">Learn More...</a>
+  </div>
 
   <!-- Images  -->
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
-    width="30%" alt="Cute Kitten">
+    width="200px" alt="Cute Kitten">
+   
   <br>
   <img width="30%"
     src="https://gray-kalb-prod.cdn.arcpublishing.com/resizer/uHc0Io7tokW-epG1i20xND8zV2Q=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
     alt="Cute Kitten">
 
-  <div>
+  <div >
     <h2>My Cute Kittens 1</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
       width="30%" alt="Cute Kitten">
@@ -50,7 +55,7 @@
       src="https://gray-kalb-prod.cdn.arcpublishing.com/resizer/uHc0Io7tokW-epG1i20xND8zV2Q=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/JVOHA3G6AJIPXNJ3ATR2NBUEZQ.jpg"
       alt="Cute Kitten">
   </div>
-  <div>
+  <div >
     <h2>My Cute Kittens 2</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYRUAHJHt67DQhu8YearNaBnlrlXHJiPduQ&usqp=CAU"
       width="30%" alt="Cute Kitten">
@@ -77,25 +82,104 @@
     convallis convallis tellus id interdum velit laoreet. Nullam vehicula ipsum a arcu.
   </p>
 
+  <a href="https://yahoo.com" target="_blank">
+    <img  src="https://s.yimg.com/rz/p/yahoo_homepage_en-US_s_f_p_bestfit_homepage.png" alt="">
+  </a>
+  <hr>
+  <!-- List li -->
+  <li>Test 1</li>
+  <li>Test 2</li>
+  <li>Test 3</li>
+  <!-- Ordered List 1. 2..... -->
+  <ol type="1">
+   <li><a href="#">Test 1</a></li>
+    <li>Test 2</li>
+    <ol>
+      <li>Test 2.1</li>
+      <li>Test 2.1</li>
+      <li>Test 2.1</li>
+      <li>Test 2.1</li>
+    </ol>
+    <li>Test 3</li>
+    <li>Test 4</li>
+  </ol>
+  <!-- Unordered list Bulletted list -->
+  <ul >
+    <li>Test 1</li>
+    <li>Test 2</li>
+    <li>Test 3</li>
+    <li>Test 4</li>
+  </ul>
+  <hr>
+  <!-- Form elements  -->
+  <input type="text" placeholder="Your Full Name">
+  <input type="button" value="Search">
+  <br>
+  <input type="date" name="" id="">
+  <button>Search</button>
+  <br>
+  <input type="checkbox" name="" id=""> SharePoint
+  <input type="checkbox" name="" id=""> Database
 
-  <system.web>
-    <membership>
-      <providers>
-        <add name="FBAMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          connectionStringName="FBADB" enablePasswordRetrieval="false" enablePasswordReset="true"
-          requiresQuestionAndAnswer="false" applicationName="/" requiresUniqueEmail="true" passwordFormat="Hashed"
-          maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1"
-          passwordAttemptWindow="10" passwordStrengthRegularExpression="" />
-      </providers>
-    </membership>
-    <roleManager>
-      <providers>
-        <add name="FBARoleProvider" connectionStringName="FBADB" applicationName="/"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-      </providers>
-    </roleManager>
-  </system.web>
+  <br>
+  <img  src="https://s.yimg.com/rz/p/yahoo_homepage_en-US_s_f_p_bestfit_homepage.png" alt="">
+  <input type="text" name="" id="">
+  <button>search</button>
+  <select>
+    <option>Value 1</option>
+    <option>Value 2</option>
+    <option>Value 3</option>
+    <option>Value 4</option>
+  </select>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/J0RZIeYSwQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+
+  <!-- Table element  table, tr, td-->
+  <hr>
+  <table border="1">
+    <tr>
+      <td>Month</td>
+      <td>Savings</td>
+      <td>Comment</td>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+      <td>Some comment</td>
+    </tr>
+  </table>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  
+
+  
 
 </body>
 
