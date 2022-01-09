@@ -1,0 +1,28 @@
+img{
+  width: 100%;
+}
+h2 {
+  color: darkblue;
+}
+#logo {
+  width: 15%;
+  float: left;
+}
+ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  
+}
+
+.service {
+  width: 30%;
+  border: 1px solid gray;
+  margin: 4px;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;     
+}
+#services {
+  background-color: lightblue;
+}
