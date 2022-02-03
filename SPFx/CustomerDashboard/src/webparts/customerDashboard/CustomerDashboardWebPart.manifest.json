@@ -16,12 +16,12 @@
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-    "group": { "default": "Other" },
-    "title": { "default": "CustomerDashboard" },
-    "description": { "default": "CustomerDashboard description" },
-    "officeFabricIconFontName": "Page",
+    "group": { "default": "OCT 2021" },
+    "title": { "default": "Customer Dashboard" },
+    "description": { "default": "Customer Dashboard is a webpart that displays customer info and Search and retrieve" },
+    "officeFabricIconFontName": "CustomizeToolbar",
     "properties": {
-      "description": "CustomerDashboard"
+      "description": "Customer Dashboard"
     }
   }]
 }

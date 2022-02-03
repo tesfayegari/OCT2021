@@ -1,38 +1,37 @@
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
+  PropertyPaneDropdown,
+  PropertyPaneSlider,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { escape } from '@microsoft/sp-lodash-subset';
+import { SPComponentLoader } from "@microsoft/sp-loader";
 
-import styles from './CustomerDashboardWebPart.module.scss';
-import * as strings from 'CustomerDashboardWebPartStrings';
+
+
 
 export interface ICustomerDashboardWebPartProps {
   description: string;
+  listName: string;
+  sliderproperty: number;
+  dropdown: string;
 }
 
 export default class CustomerDashboardWebPart extends BaseClientSideWebPart<ICustomerDashboardWebPartProps> {
 
   public render(): void {
-    this.domElement.innerHTML = `
-      <div class="${ styles.customerDashboard }">
-        <div class="${ styles.container }">
-          <div class="${ styles.row }">
-            <div class="${ styles.column }">
-              <span class="${ styles.title }">Welcome to SharePoint!</span>
-              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
-              <p class="${ styles.description }">${escape(this.properties.description)}</p>
-              <a href="https://aka.ms/spfx" class="${ styles.button }">
-                <span class="${ styles.label }">Learn more</span>
-              </a>
-            </div>
-            
-          </div>
-          <div>This is awesome</div>
-        </div>
-      </div>`;
+    SPComponentLoader.loadCss("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+    
+    this.domElement.innerHTML = `<h2>Customer Dashboard Coming soon</h2>`;
+  }
+
+  private getData(){
+    return "Tesfaye Gari";
+  }
+
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
   }
 
   protected get dataVersion(): Version {
@@ -44,15 +43,36 @@ export default class CustomerDashboardWebPart extends BaseClientSideWebPart<ICus
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription
+            description: "Customer Dashboard Webpart"
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: "General Information",
               groupFields: [
                 PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
+                  label: 'Webpart Description'
+                }),
+                PropertyPaneTextField('listName', {
+                  label: 'Type Your List Name',
+                  placeholder: 'List Name'
+                }),
+                PropertyPaneSlider('sliderproperty',{  
+                  label:"Max Items",  
+                  min:5,  
+                  max:20,  
+                  value:5,  
+                  showValue:true,  
+                  step:1                
+                }),
+                PropertyPaneDropdown('dropdown', {
+                  label:'Select Students',
+                  options: [
+                    { key: 'Item1', text: 'Tesfaye' },
+                    { key: 'Item2', text: 'Berhan' },
+                    { key: 'Item3', text: 'Dawit' },
+                    { key: 'Item4', text: 'Bereket' },
+                  ]
+                }) 
               ]
             }
           ]
