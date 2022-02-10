@@ -35,30 +35,54 @@ export default class CustomerDashboardWebPart extends BaseClientSideWebPart<ICus
     </div>
     `;
 
-    if(this.properties.listName && this.properties.maxItem){
+    if (this.properties.listName && this.properties.maxItem) {
       this.getListItems()
-      .then(response => {
-        console.log('Data is ', response.value);
-        let itemsHtml = "<h2>Customer Information:</h2>";
-        for(let item of response.value){
-          itemsHtml += `<div class="alert alert-primary" role="alert">
-                          ${item.Title}
-                        </div>`
-        }
-        this.domElement.innerHTML = itemsHtml;
+        .then(response => {
+          console.log('Data is ', response.value);
+          let itemsHtml = `<h2>Product Dashboard</h2>
+                          <div class="container-fluid">
+                             <div class="row">`;
+          for (let item of response.value) {
+            itemsHtml += this.getProductHtml(item);
+          }
+          this.domElement.innerHTML = itemsHtml + '</div></div>';
 
-      }, 
-            error => console.error('Oops error occured', error))
-    }else{
+        },
+          error => console.error('Oops error occured', error))
+    } else {
       console.log('Please Type List name and max item');
     }
-    
+
+  }
+
+  private getProductHtml(item) {
+    return `
+          <div class="col col-md-4 mb-2">
+            <div class="card">
+              <img class="card-img-top" src="${item.field_5}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title"><a href="/sites/OCT2021Communication/Lists/DummyTestData1/DispForm.aspx?ID=${item.Id}" target="_blank" title="View Product">${item.field_1}</a></h4>
+                <p class="card-text">${item.field_2}</p>
+                <div class="row">
+                  <div class="col-6">
+                    <p class="btn btn-danger btn-block">$${item.field_4}</p>
+                  </div>
+                  <div class="col-6">
+                    <a href="#" class="btn btn-success btn-block">Add</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
   }
 
 
 
   private getListItems() {
-    return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getbytitle('${this.properties.listName}')/items?$top=${this.properties.maxItem}`, SPHttpClient.configurations.v1)
+    let url = this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getbytitle('${this.properties.listName}')/items?$top=${this.properties.maxItem}`;
+
+    return this.context.spHttpClient.get(url, SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => {
         return response.json();
       });
@@ -67,6 +91,7 @@ export default class CustomerDashboardWebPart extends BaseClientSideWebPart<ICus
   protected get disableReactivePropertyChanges(): boolean {
     return true;
   }
+
 
   protected get dataVersion(): Version {
     return Version.parse('1.0');
