@@ -69,11 +69,11 @@ export default class ProductsDashboardWebPart extends BaseClientSideWebPart<IPro
                 }),
                 PropertyPaneSlider('maxItem', {
                   label: "Max Items",
-                  min: 1,
-                  max: 20,
+                  min: 9,
+                  max: 500,
                   value: 1,
                   showValue: true,
-                  step: 1
+                  step: 3
                 })
               ]
             }

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faTable, faTh } from '@fortawesome/free-solid-svg-icons';
 
 export interface IProductsProps {
   items: any[];
@@ -30,7 +32,12 @@ export default class Products extends React.Component<IProductsProps, IProductsS
       <div className="container-fluid">
         <h2>Products</h2>
         <div>
-          <button onClick={this.handleButton} className="btn">{this.state.buttonName}</button>
+          <div className="row">
+            <div className="col mb-2">
+              <button onClick={this.handleButton} className="btn float-right">{this.state.buttonName=='Table'? <FontAwesomeIcon icon={faTable} /> : <FontAwesomeIcon icon={faTh} />}</button>
+            </div>
+          </div>
+          
           {this.state.toggle && <GridProduct items={this.props.items}></GridProduct>}
           {!this.state.toggle && <TableProduct items={this.props.items}></TableProduct>}
         </div>
